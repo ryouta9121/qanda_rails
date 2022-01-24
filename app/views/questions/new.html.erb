@@ -1,0 +1,23 @@
+<div>
+  <div class="col-md-4 offset-md-4"></div>
+    <h2 class="text-center">New question</h2>
+    <%= form_with model: @question, local: true do |f| %>
+      <div class= "from-group">
+        <label>Name</label>
+        <%= f.text_field :name, class: "from-control"%>
+      </div>
+
+      <div class= "from-group">
+        <label>Title</label>
+        <%= f.text_field :title, class: "from-control"%>
+      </div>
+
+      <div class= "from-group">
+        <label>Content</label>
+        <%= f.text_field :content, class: "from-control"%>
+      </div>
+      <div class="text-center">
+        <%=f.submit "Save",class: "btn btn-primary" %>
+      </div>
+    <% end %>
+</div>
